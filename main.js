@@ -54,8 +54,8 @@ const updateLightAndSphere = (event) => {
         directionalLight.color = lightColor;
 
         // Move the sphere with touch position
-        sphere.position.x = mouseX * 2;
-        sphere.position.y = mouseY * 2;
+        // sphere.position.x = mouseX * 2;
+        // sphere.position.y = mouseY * 2;
     }
 };
 document.addEventListener('touchmove', updateLightAndSphere);
