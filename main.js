@@ -5,14 +5,27 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Create a metallic sphere
-const geometry = new THREE.TorusGeometry( 2.8, 0.4, 100, 100 );
+const geometry = new THREE.TorusGeometry( 2.8, 0.8, 100, 100 );
 const material = new THREE.MeshStandardMaterial({
     color: 0x808080,  // Gray metallic color
-    metalness: 0.9,    // 100% metallic
+    metalness: 0.6,    // 100% metallic
     roughness: 0.7,  // Some roughness
 });
+
+const textureLoader = new THREE.TextureLoader();
+textureLoader.load('holo2.png', (texture) => {
+    // Create a material with the loaded texture
+    const material = new THREE.MeshStandardMaterial({
+        map: texture, // Apply the texture to the material's map
+        metalness: 1, // 100% metallic
+        roughness: 0.2, // Some roughness
+    });
+
+
+
 const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
+});
 
 // Create directional light with an initial color and direction
 let lightColor = 0xffffff;  // Initial white color
