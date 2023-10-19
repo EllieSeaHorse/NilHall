@@ -36,7 +36,7 @@ document.addEventListener('mousemove', (event) => {
     // Update light direction based on mouse position
     directionalLight.position.set(mouseX, mouseY, 1);
 });
-document.addEventListener('touchstart',(event) => {
+document.addEventListener('touchmove',(event) => {
     const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
     const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 
