@@ -60,17 +60,17 @@ const updateLightAndSphere = (event) => {
 };
 document.addEventListener('touchmove', updateLightAndSphere);
 
-document.addEventListener('touchstart',(event) => {
-    const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-    const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-
-    // Update light color based on mouse position
-    lightColor = new THREE.Color(mouseX + 1, mouseY + 1, 1);
-    directionalLight.color = lightColor;
-
-    // Update light direction based on mouse position
-    directionalLight.position.set(mouseX, mouseY, 1);
-});
+// document.addEventListener('touchstart',(event) => {
+//     const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+//     const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+//
+//     // Update light color based on mouse position
+//     lightColor = new THREE.Color(mouseX + 1, mouseY + 1, 1);
+//     directionalLight.color = lightColor;
+//
+//     // Update light direction based on mouse position
+//     directionalLight.position.set(mouseX, mouseY, 1);
+// });
 
 
 
