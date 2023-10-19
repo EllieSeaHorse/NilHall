@@ -5,7 +5,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Create a metallic sphere
-const geometry = new THREE.TorusGeometry(3, 0.8, 100, 100);
+const geometry = new THREE.TorusGeometry(2.8, 0.6, 100, 100);
 let sphereMaterial; // Declare the material outside the textureLoader block
 
 const textureLoader = new THREE.TextureLoader();
