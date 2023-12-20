@@ -11,10 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
     <link href="style.css" rel="stylesheet">
     <link href="/dist/output.css" rel="stylesheet">
     <title>Document</title>
     <style>
+        html {
+            scroll-snap-type: mandatory;
+        }
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
@@ -24,15 +29,32 @@
         canvas {
             background: transparent; /* Make the canvas background transparent */
         }
+        .full-height-section {
+            scroll-snap-align: start; /* Ensure proper snapping */
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+            <!-- import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.134.0/examples/jsm/loaders/GLTFLoader.js'; -->
 
+    <!-- <script type="module">
+        import * as THREE from 'https://cdn.skypack.dev/three@0.134.0/build/three.module.js';
+    </script> -->
+      
 </head>
 
-<body>
-<div class="z-40 fixed w-screen h-screen flex justify-center items-center text-white">
+<body class="h-full overflow-y-scroll scroll-snap-y">
+<!-- 
+    <div class="z-40 full-height-section  h-screen flex justify-center items-center text-white bg-transparent ">Section 1</div>
+    <div class="full-height-section h-screen flex justify-center items-center text-white bg-transparent">Section 2</div>
+    <div class="full-height-section h-screen flex justify-center items-center text-white bg-transparent ">Section 3</div>
+    <div class="full-height-section h-screen flex justify-center items-center text-white bg-transparent">Section 4</div>
+    <div class="full-height-section h-screen flex justify-center items-center text-white bg-transparent">Section 5</div>
+
+
+     -->
+    <div class="z-40 absolute w-screen border full-height-section h-screen flex justify-center items-center text-white">
     <div class="font-medium m-auto text-5xl sm:text-5xl md:text-6xl  font-bold text-center">
-        <h1 class="uppercase">It's Infinite</h1>
+        <!-- <h1 class="uppercase">It's Infinite</h1> -->
     </div>
     <a href="index.html" class="m-6 fixed top-0 right-0 text-sm text-white cursor-pointer">Contact Us</a>
     <div href="index.html" class="leading-7 m-6 fixed bottom-0 left-0 text-4xl text-white cursor-pointer">
@@ -40,11 +62,13 @@
         <h1 class="text-sm">creative hall</h1>
     </div>
 
+    
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
 <script src="main.js"></script>
+
 
 </body>
 
