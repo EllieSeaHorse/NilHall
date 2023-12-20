@@ -10,7 +10,7 @@ const textureLoader = new THREE.TextureLoader();
 textureLoader.load('holo2.png', (texture) => {
     material = new THREE.MeshStandardMaterial({
         map: texture,
-        metalness: 1,
+        metalness: 0.9,
         roughness: 0.2,
     });
     createShapes();
@@ -49,18 +49,28 @@ function loadGeometries() {
       rotation: new THREE.Euler(Math.PI / 2, 0, 0),
       name: 'Infiite'
     },
+
+   
+
     {
       path: 'Models/model(3).json',
       position: new THREE.Vector3(-4, -5, 0),
       scale: new THREE.Vector3(0.5, 0.5, 0.5),
       rotation: new THREE.Euler(Math.PI / 2, 0, 0),
-      name: 'Branding'
+      name: 'branding'
+    },
+    {
+      path: 'Models/model(11).json',
+      position: new THREE.Vector3(0, -6, 0),
+      scale: new THREE.Vector3(1, 1, 1),
+      rotation: new THREE.Euler(-Math.PI / 2, 0, 0),
+      name: 'bill'
     },
     {
       path: 'Models/model(4).json',
       position: new THREE.Vector3(-4, -10, 0),
       scale: new THREE.Vector3(0.5, 0.5, 0.5),
-      rotation: new THREE.Euler(Math.PI / 2, 0, 0),
+      rotation: new THREE.Euler(-Math.PI / 2, 0, 0),
       name: 'Web'
     },
     {
@@ -83,6 +93,27 @@ function loadGeometries() {
       scale: new THREE.Vector3(0.5, 0.5, 0.5),
       rotation: new THREE.Euler(Math.PI / 2, 0, 0),
       name: 'Vitrine'
+    },
+    {
+      path: 'Models/model(14).json',
+      position: new THREE.Vector3(0, -25, 0),
+      scale: new THREE.Vector3(1, 1, 1),
+      rotation: new THREE.Euler(-Math.PI / 2, 0, 0),
+      name: 'vitrine'
+    },
+    {
+      path: 'Models/model(13).json',
+      position: new THREE.Vector3(0, -25, 0),
+      scale: new THREE.Vector3(1, 1, 1),
+      rotation: new THREE.Euler(-Math.PI / 2, 0, 0),
+      name: 'sofa'
+    },
+     {
+      path: 'Models/model(12).json',
+      position: new THREE.Vector3(0, -25, -5),
+      scale: new THREE.Vector3(1, 1, 1),
+      rotation: new THREE.Euler(-Math.PI / 2, 0, 0),
+      name: 'window'
     }
   ];
   
@@ -187,7 +218,9 @@ const handleScroll = (event) => {
 };
 
 // Add event listener for scroll on the window
+window.addEventListener('scroll', handleScroll);
 window.addEventListener('wheel', handleScroll);
+
 
 
 
